@@ -7,6 +7,9 @@ function createCanvas() {
     }
 }
 
+//creating the dot class
+
+
 
 //Creation
 
