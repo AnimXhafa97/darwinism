@@ -1,5 +1,3 @@
-running = true;
-
 function createCanvas() {
     var canvas = document.getElementById('canvas')
     if (canvas.getContext) {
@@ -28,23 +26,15 @@ class Bubble {
   }
 
   show() {
-    var canvas = getElementById('canvas')
+    var canvas = document.getElementById('canvas')
     var ctx = canvas.getContext('2d')
 
-    ctx.beginPath()
-    ctx.arc(100, 100, 25, 0, 2 * Math.PI)
+    ctx.beginPath();
+    ctx.arc(getRandomInt(0, 800), getRandomInt(0, 800), 10, 0, 2*Math.PI, false)
+    ctx.fillStyle = '#FFAA77'
     ctx.fill();
-    ctx.stroke()
+    ctx.stroke();
   }
 
-}
 
-function runAlgo() {
-  while (running) {
-    let bubble = Bubble()
-  }
-}
-
-function stopAlgo() {
-  running = false;
 }
